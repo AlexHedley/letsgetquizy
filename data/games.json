@@ -2,18 +2,29 @@
     "games": [
         {
             "id": 1,
-            "name": "",
-            "date": "2021-01-01",
+            "name": "Birthday Quiz",
+            "date": "2021-12-08",
             "description": "",
+            "numRounds": 6,
             "players": [
                 {
-                    "name": "",
-                    "score": ,
+                    "name": "Alex",
+                    "score": 32.5,
                     "winner": true
                 },
                 {
-                    "name": "",
-                    "score": ,
+                    "name": "Philip",
+                    "score": 32,
+                    "winner": false
+                },
+                {
+                    "name": "Jonathan",
+                    "score": 28,
+                    "winner": false
+                },
+                {
+                    "name": "Carlin",
+                    "score": 24,
                     "winner": false
                 }
             ]

@@ -1,11 +1,11 @@
-# GAMENAME
+# Let's Get Quizy
 
-![](images/GAMENAME.jpeg "")
+<!-- ![](images/GAMENAME.jpeg "") -->
 
 ## Site
 
 - [local](http://localhost:8000/)
-- [Published](https://alexhedley.github.io/REPONAME)
+- [Published](https://alexhedley.github.io/letsgetquizy)
 
 ## Run
 
