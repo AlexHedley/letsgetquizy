@@ -2,6 +2,7 @@ var myApp = angular.module('myApp', []);
 myApp.controller('myController', function ($scope, $http, $q, $filter) {
 
     $scope.games = [];
+    // $scope.winnersSummary = [];
 
     $scope.init = function () {
         getData();
@@ -14,14 +15,20 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
         .then(function(response) {
             $scope.games = response.data.games;
             $scope.generatePivot();
+            // $scope.generateSummary();
         });
     };
+
+    // $scope.generateSummary = () => {
+    //     $scope.winnersSummary = $scope.games.flatMap(game => game.players.filter(player => player.winner === true));
+    // }
 
     $scope.generatePivot = () => {
         
         $scope.data = $scope.games.map(game => game.players.filter(player => player.winner === true));
+        
         var data = [].concat.apply([], $scope.data);
-
+        
         if ($scope.ui) {
             $("#output").pivotUI(
                 data,

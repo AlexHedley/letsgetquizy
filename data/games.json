@@ -1,6 +1,39 @@
 {
     "games": [
         {
+            "id": 7,
+            "name": "",
+            "date": "2021-12-16",
+            "description": "",
+            "numRounds": 8,
+            "players": [
+                {
+                    "name": "Alex",
+                    "score": 29,
+                    "rounds": "3|6|6|3|6|5",
+                    "winner": false
+                },
+                {
+                    "name": "Philip",
+                    "score": 35,
+                    "rounds": "3|5|4|7|9|7",
+                    "winner": false
+                },
+                {
+                    "name": "Jonathan",
+                    "score": 42,
+                    "rounds": "6|5|9|9|7|6",
+                    "winner": true
+                },
+                {
+                    "name": "Carlin",
+                    "score": 29,
+                    "rounds": "3|6|4|4|7|5",
+                    "winner": false
+                }
+            ]
+        },
+        {
             "id": 6,
             "name": "Birthday Quiz",
             "date": "2021-12-08",
