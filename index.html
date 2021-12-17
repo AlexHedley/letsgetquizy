@@ -60,7 +60,20 @@
         <div ng-controller="myController">
 
             <div class="container">
-                
+
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col">
+                        <h2>Summary</h2>
+                        <div class="text-center">
+                            <div ng-repeat="(key, value) in winnersSummary">
+                                <!-- <p>{{key}}: {{value}}</p> -->
+                                <p>{{value}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col">
 
@@ -81,18 +94,6 @@
 
                     </div>
                 </div>
-
-                <!-- <div class="row" style="margin-bottom: 30px;">
-                    <div class="col">
-
-                        <div id="output" class="text-center">
-                            <div ng-repeat="winner in winnersSummary">
-                                <p>{{winner}}</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
 
                 <div class="row">
                     <div 

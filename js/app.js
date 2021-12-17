@@ -15,13 +15,27 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
         .then(function(response) {
             $scope.games = response.data.games;
             $scope.generatePivot();
-            // $scope.generateSummary();
+            $scope.generateSummary();
         });
     };
 
-    // $scope.generateSummary = () => {
-    //     $scope.winnersSummary = $scope.games.flatMap(game => game.players.filter(player => player.winner === true));
-    // }
+    $scope.generateSummary = () => {
+        var obj = $scope.games.flatMap(game => game.players.filter(player => player.winner === true));
+        var result = [];
+        Array.from(new Set(obj.map(x => x.name))).forEach(x => {
+            result.push(obj.filter(y => y.name === x).reduce((output,item) => {
+                let val = output[x] === undefined?0:output[x];
+                output[x] =  (item.winner +  val); 
+                return output;
+            },{}));
+        });
+        console.log(result);
+        $scope.winnersSummary = result;
+
+        result.forEach((a, i) =>
+            console.log(i, [{ key: Object.keys(a) }, { val: Object.values(a) }])
+        )
+    }
 
     $scope.generatePivot = () => {
         
